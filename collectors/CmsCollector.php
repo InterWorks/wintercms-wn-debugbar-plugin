@@ -115,7 +115,7 @@ class CmsCollector extends DataCollector implements Renderable
     {
         return [
             'route' => [
-                'icon' => 'share',
+                'icon' => 'share-3',
                 'widget' => 'PhpDebugBar.Widgets.VariableListWidget',
                 'map' => 'cms',
                 'default' => '{}'

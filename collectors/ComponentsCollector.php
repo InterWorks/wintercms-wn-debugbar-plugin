@@ -70,7 +70,7 @@ class ComponentsCollector extends DataCollector implements Renderable
     {
         return [
             'components' => [
-                'icon' => 'puzzle-piece',
+                'icon' => 'box',
                 'widget' => 'PhpDebugBar.Widgets.VariableListWidget',
                 'map' => 'components',
                 'default' => '{}'

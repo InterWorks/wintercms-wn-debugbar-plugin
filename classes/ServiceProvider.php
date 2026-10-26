@@ -41,6 +41,12 @@ class ServiceProvider extends BaseServiceProvider
 
         parent::boot($events);
 
+        /*
+         * Winter refreshes the router's name lookups while the application is booting, before service providers
+         * boot, so the named routes Laravel Debugbar 4 adds here (such as debugbar.assets) would not resolve.
+         */
+        $this->app['router']->getRoutes()->refreshNameLookups();
+
         $this->registerMiddleware(InjectDebugbar::class);
     }
 
