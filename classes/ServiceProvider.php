@@ -41,6 +41,8 @@ class ServiceProvider extends BaseServiceProvider
 
         parent::boot($events);
 
+        $this->app['router']->getRoutes()->refreshNameLookups();
+
         $this->registerMiddleware(InjectDebugbar::class);
     }
 
